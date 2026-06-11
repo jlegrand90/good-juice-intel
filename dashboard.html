@@ -87,7 +87,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 11, 2026 at 12:39 AM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 11, 2026 at 02:30 AM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -213,6 +213,42 @@
         </div>
         
         <div class="section">
+            <div class="section-title">☕ FUTURES vs SPECIALTY PRICING (90 Days)</div>
+            <div style="padding:16px;background:rgba(0,217,255,0.1);border-radius:8px;margin-bottom:16px;">
+                <strong style="color:#00d9ff;font-size:0.95rem;">CORRELATION ANALYSIS</strong>
+                <p style="margin-top:8px;color:#888;font-size:0.85rem;">
+                    Coffee C Futures (ICE Arabica) vs. Specialty Green Coffee Avg. Price<br>
+                    <strong>Watch for:</strong> Divergence = opportunity (specialty decoupled from commodity), Correlation = market risk
+                </p>
+            </div>
+            <div class="chart-container" style="height:400px;"><canvas id="futuresChart"></canvas></div>
+            <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+                <div class="stat-card">
+                    <div class="value" style="font-size:1.8rem;color:#ff6b6b;">251¢</div>
+                    <div class="label">Coffee C Futures (Current)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" style="font-size:1.8rem;color:#00ff88;">$27.30</div>
+                    <div class="label">Specialty Avg (90 Day)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" style="font-size:1.8rem;color:#ffd93d;">0.00</div>
+                    <div class="label">Correlation Coefficient</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" style="font-size:1.8rem;color:#c792ea;">10.9x</div>
+                    <div class="label">Specialty Premium Multiple</div>
+                </div>
+            </div>
+            <div style="margin-top:16px;padding:16px;background:rgba(0,255,136,0.1);border-radius:8px;">
+                <strong>📊 INTERPRETATION:</strong><br>
+                <span style="color:#888;font-size:0.9rem;">
+                LOW CORRELATION — Specialty market operating independently from commodities. Good environment for premium positioning.
+                </span>
+            </div>
+        </div>
+        
+        <div class="section">
             <div class="section-title">HARVEST CALENDAR</div>
             <div class="harvest-calendar">
                 <div class="harvest-card"><h4>GREEN - NOW</h4><div class='harvest-item'><span class='dot green'></span>Colombia</div><div class='harvest-item'><span class='dot green'></span>Ethiopia</div><div class='harvest-item'><span class='dot green'></span>Kenya</div></div>
@@ -270,7 +306,7 @@
             <div class="section-title">TREND VELOCITY</div>
             <div class="grid-2">
                 <div>
-                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Natural, Cold Fermented</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Cold Fermentation, Dried on Raised Beds, Natural, Anaerobic, Cold Fermented</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Dried on African beds, Natural, Dried on Raised Beds</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Washed, Wet-fermented, Dried on Raised Beds, Traditional</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Floated, Traditional, Fully Washed</span><span style='color:#00ff88'>+NEW</span></div></div>
+                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Washed, Wet-fermented, Dried on Raised Beds, Traditional</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural, Washed</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Anaerobic, Washed</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Floated, Traditional, Fully Washed</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural, Cold Fermented</span><span style='color:#00ff88'>+NEW</span></div></div>
                     <div class="trend-category"><h4>GROWING</h4></div>
                 </div>
                 <div>
@@ -464,6 +500,77 @@
             options: {
                 responsive: true, maintainAspectRatio: false,
                 plugins: { title: {display:true,text:'Process Methods',color:'#e8e8e8'}, legend:{position:'right',labels:{color:'#e8e8e8'}} }
+            }
+        });
+        
+        // Futures vs Specialty Pricing Chart
+        new Chart(document.getElementById('futuresChart'), {
+            type: 'line',
+            data: {
+                labels: ['03-13','03-20','03-27','04-03','04-10','04-17','04-24','05-01','05-08','05-15','05-22','05-29','06-05'],
+                datasets: [{
+                    label: 'Coffee C Futures (¢/lb)',
+                    data: [219.28,221.0,220.98,219.73,233.24,236.05,234.57,232.75,242.51,238.34,246.24,242.83,245.16],
+                    borderColor: 'rgba(255,107,107,1)',
+                    backgroundColor: 'rgba(255,107,107,0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    yAxisID: 'y'
+                }, {
+                    label: 'Specialty Green ($/lb)',
+                    data: [27.3],
+                    borderColor: 'rgba(0,255,136,1)',
+                    backgroundColor: 'rgba(0,255,136,0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    title: {display:true,text:'90-Day Price Comparison',color:'#e8e8e8',font:{size:14}},
+                    legend: {labels:{color:'#e8e8e8'}},
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label.includes('Futures')) {
+                                    return label + ': ' + context.parsed.y.toFixed(0) + '¢/lb';
+                                } else {
+                                    return label + ': $' + context.parsed.y.toFixed(2) + '/lb';
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {color:'#888',maxTicksLimit:10},
+                        grid: {color:'rgba(255,255,255,0.1)'}
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {display:true,text:'Futures (¢/lb)',color:'#ff6b6b'},
+                        ticks: {color:'#ff6b6b'},
+                        grid: {color:'rgba(255,255,255,0.1)'}
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {display:true,text:'Specialty ($/lb)',color:'#00ff88'},
+                        ticks: {color:'#00ff88',callback: function(value) {return '$' + value;}},
+                        grid: {drawOnChartArea:false}
+                    }
+                }
             }
         });
     </script>

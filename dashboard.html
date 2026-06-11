@@ -56,12 +56,23 @@
         .tier-bar .bar { flex: 1; height: 24px; background: rgba(0,0,0,0.3); border-radius: 4px; overflow: hidden; }
         .tier-bar .fill { height: 100%; background: linear-gradient(90deg, #00d9ff, #00ff88); }
         .tier-bar .count { width: 100px; text-align: right; }
+        .picks-section { background: linear-gradient(135deg, rgba(199,146,234,0.1), rgba(0,217,255,0.1)); border: 2px solid rgba(199,146,234,0.3); }
+        .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
+        .pick-card .pick-roaster, .leader-card .leader-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
+        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
+        .pick-card .pick-price, .leader-card .leader-price { font-size: 1.2rem; font-weight: 700; color: #00ff88; margin-bottom: 12px; }
+        .leader-card .leader-stats { color: #888; font-size: 0.85rem; margin-bottom: 12px; }
+        .buy-btn { display: inline-block; padding: 8px 16px; background: linear-gradient(90deg, #00d9ff, #00ff88); color: #1a1a2e; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
+        .buy-btn:hover { opacity: 0.9; }
+        .category-title { font-size: 1rem; color: #00d9ff; margin: 20px 0 12px 0; font-weight: 600; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 10, 2026 at 10:11 PM | Next Refresh: Monday 9am</div>
+        <div class="meta">Generated: June 10, 2026 at 11:28 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -78,6 +89,22 @@
                 <div class="stat-card"><div class="value">14</div><div class="label">Origins</div></div>
                 <div class="stat-card"><div class="value">18</div><div class="label">Varieties</div></div>
             </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">MARKET ACTIVITY (Multi-Timeframe)</div>
+            <table class="opportunity-table">
+                <tr>
+                    <th>Timeframe</th>
+                    <th>New Releases</th>
+                    <th>Active Roasters</th>
+                    <th>Avg Price</th>
+                </tr>
+                <tr><td><strong>24 Hours</strong></td><td>48</td><td>26</td><td>$26.88</td></tr>
+                <tr><td><strong>7 Days</strong></td><td>48</td><td>26</td><td>$26.88</td></tr>
+                <tr><td><strong>30 Days</strong></td><td>48</td><td>26</td><td>$26.88</td></tr>
+                <tr><td><strong>90 Days</strong></td><td>48</td><td>26</td><td>$26.88</td></tr>
+            </table>
         </div>
         
         <div class="section">
@@ -224,7 +251,7 @@
             <div class="section-title">TREND VELOCITY</div>
             <div class="grid-2">
                 <div>
-                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Washed, Aerobic, Traditional</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Honey, Anaerobic</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural, Dried on Raised Beds, Floated, Sorted</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Anaerobic, Natural</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Fully Washed, Sorted</span><span style='color:#00ff88'>+NEW</span></div></div>
+                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Semi Washed</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Fully Washed, Sorted</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Washed, Screened, Shade-dried</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Sorted, Washed, Brix Measured, Dried on Patios, Pulped</span><span style='color:#00ff88'>+NEW</span></div></div>
                     <div class="trend-category"><h4>GROWING</h4></div>
                 </div>
                 <div>
@@ -274,6 +301,48 @@
                 <tr><td>$28</td><td>$14/lb</td><td style="color:#00ff88">50%+</td></tr>
                 <tr><td>$32</td><td>$17/lb</td><td style="color:#00ff88">50%+</td></tr>
             </table>
+        </div>
+        
+        <div class="section picks-section">
+            <div class="section-title">JOSHUA'S HOME BREW PICKS</div>
+            
+            <div class="category-title">🍓 FRUITY + HIGH ACID (Prodigal / La Cabra / Hydrangea Style)</div>
+            <div class="picks-grid"><div class="pick-card">
+            <div class="pick-name">El Recreo Colombia</div>
+            <div class="pick-roaster">Bonanza Coffee Roasters</div>
+            <div class="pick-details">Colombia • Anaerobic, Natural • Pink Bourbon</div>
+            <div class="pick-price">$28.76</div>
+            <a href="https://shop.bonanzacoffee.de/products/e-recreo" target="_blank" class="buy-btn">Buy Now →</a>
+        </div></div>
+            
+            <div class="category-title">🧪 WILD + STRANGE (Experimental Processes)</div>
+            <div class="picks-grid"><div class="pick-card">
+            <div class="pick-name">El Recreo Colombia</div>
+            <div class="pick-roaster">Bonanza Coffee Roasters</div>
+            <div class="pick-details">Colombia • Anaerobic, Natural • Pink Bourbon</div>
+            <div class="pick-price">$28.76</div>
+            <a href="https://shop.bonanzacoffee.de/products/e-recreo" target="_blank" class="buy-btn">Buy Now →</a>
+        </div><div class="pick-card">
+            <div class="pick-name">Nkanda</div>
+            <div class="pick-roaster">Flower Child Coffee</div>
+            <div class="pick-details">Burundi • Washed, Wet-fermented, Dried on Raised Beds, Traditional • Red Bourbon</div>
+            <div class="pick-price">$25.50</div>
+            <a href="https://flowerchildcoffee.com/products/nkanda" target="_blank" class="buy-btn">Buy Now →</a>
+        </div><div class="pick-card">
+            <div class="pick-name">Panama - Abu Catuai TN-5240 | Re-Hydro Double Phased Anaerobic Natural - 200g</div>
+            <div class="pick-roaster">Rogue Wave Coffee Co</div>
+            <div class="pick-details">Panama • Anaerobic, Natural, Dried on Raised Beds • Catuai</div>
+            <div class="pick-price">$5.02</div>
+            <a href="https://roguewavecoffee.ca/products/panama-abu-catuai-tn-5240-re-hydro-double-phased-anaerobic-natural-200g" target="_blank" class="buy-btn">Buy Now →</a>
+        </div></div>
+            
+            <div class="category-title">🍫 CLASSIC CHOCOLATE + CARAMEL (Comfort Coffee)</div>
+            <div class="picks-grid"><div class='pick-card'><div class='pick-name'>No classic picks this week</div></div></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">MARKET LEADERS (Top 10 by Demand Signals)</div>
+            <div class="picks-grid"><div class='leader-card'><div class='leader-name'>No market leaders data yet</div></div></div>
         </div>
     </div>
     

@@ -69,7 +69,9 @@
         .category-title { font-size: 1rem; color: #00d9ff; margin: 20px 0 12px 0; font-weight: 600; }
         .bag-image-container { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; }
         .bag-image { max-width: 100%; max-height: 100%; object-fit: contain; }
-        .no-image { color: #666; font-size: 0.85rem; }
+        .bag-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,217,255,0.1), rgba(0,255,136,0.1)); }
+        .placeholder-initials { font-size: 2.5rem; font-weight: 700; color: #00d9ff; letter-spacing: 2px; }
+        .placeholder-roaster { font-size: 0.75rem; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
         .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .table-container table { min-width: 800px; }
         @media (max-width: 768px) {
@@ -87,7 +89,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 13, 2026 at 09:05 AM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 13, 2026 at 08:31 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -318,7 +320,7 @@
             <div class="section-title">TREND VELOCITY</div>
             <div class="grid-2">
                 <div>
-                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Natural, Washed, Traditional, Depulped</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Washed, Honey</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Yeast Inoculated, Co-fermented, Wine Yeast</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Washed, Slow Dry, Dried on Raised Beds, Shade-dried</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural, Extended Fermentation, Dried on Raised Beds</span><span style='color:#00ff88'>+NEW</span></div></div>
+                    <div class="trend-category"><h4>EMERGING</h4><div class='trend-item'><span>Washed, Sorted, Dried on Raised Beds</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Dried on Raised Beds, Washed, Pulped</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Extended Fermentation, Natural</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Natural, Swiss Water Process Decaf</span><span style='color:#00ff88'>+NEW</span></div><div class='trend-item'><span>Honey, Anaerobic</span><span style='color:#00ff88'>+NEW</span></div></div>
                     <div class="trend-category"><h4>GROWING</h4></div>
                 </div>
                 <div>
@@ -434,7 +436,10 @@
             
             <div class="category-title">🍓 FRUITY + HIGH ACID (Prodigal / La Cabra / Hydrangea Style)</div>
             <div class="picks-grid"><div class="pick-card">
-            <div class="bag-image-container"><div class="no-image">No image available</div></div>
+            <div class="bag-image-container"><div class="bag-placeholder">
+                <div class="placeholder-initials">EA</div>
+                <div class="placeholder-roaster">Bean's Bean</div>
+            </div></div>
             <div class="pick-name">Eduardo Armero</div>
             <div class="pick-roaster">Bean's Bean</div>
             <div class="pick-details">Colombia • Washed • Pink Bourbon</div>
@@ -465,21 +470,27 @@
             
             <div class="category-title">🧪 WILD + STRANGE (Experimental Processes)</div>
             <div class="picks-grid"><div class="pick-card">
-            <div class="bag-image-container"><div class="no-image">No image available</div></div>
+            <div class="bag-image-container"><div class="bag-placeholder">
+                <div class="placeholder-initials">S-F</div>
+                <div class="placeholder-roaster">Airworks Coffee</div>
+            </div></div>
             <div class="pick-name">Smash - Finca Nogales Typica Virtuoso</div>
             <div class="pick-roaster">Airworks Coffee</div>
             <div class="pick-details">Colombia • Washed, Thermal Shock • Typica</div>
             <div class="pick-price">$35.00</div>
             <a href="https://airworkscoffee.com/products/smash-finca-nogales-typica-virtuoso" target="_blank" class="buy-btn">Buy Now →</a>
         </div><div class="pick-card">
-            <div class="bag-image-container"><div class="no-image">No image available</div></div>
+            <div class="bag-image-container"><div class="bag-placeholder">
+                <div class="placeholder-initials">S-K</div>
+                <div class="placeholder-roaster">Airworks</div>
+            </div></div>
             <div class="pick-name">Smash - Kaweri Yeast Inoculated Anaerobic Robusta</div>
             <div class="pick-roaster">Airworks</div>
             <div class="pick-details">Uganda • Yeast Inoculated, Anaerobic • Robusta</div>
             <div class="pick-price">$24.00</div>
             <a href="https://airworkscoffee.com/products/smash-kaweri-yeast-inoculated-anaerobic-robusta" target="_blank" class="buy-btn">Buy Now →</a>
         </div><div class="pick-card">
-            <div class="bag-image-container"><div class="no-image">No image available</div></div>
+            <div class="bag-image-container"><img src="bag-images/kb_coffee_roasters_colombie_-_el_diviso_sudan_rum_colombia.jpg" alt="Colombie - El Diviso Sudan Rume" class="bag-image"></div>
             <div class="pick-name">Colombie - El Diviso Sudan Rume</div>
             <div class="pick-roaster">KB Coffee Roasters</div>
             <div class="pick-details">Colombia • Anaerobic, Natural, Sorted, Thermal Shock, Floated • Sudan Rume</div>

@@ -85,10 +85,340 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 15, 2026 at 03:25 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 15, 2026 at 03:27 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
+        
+        <div class="section sourcing-section">
+            <div class="section-title">📈 SOURCING INTELLIGENCE</div>
+            
+            <div class="grid-2" style="margin-bottom: 24px;">
+                <div>
+                    <div style="color: #888; font-size: 0.9rem; margin-bottom: 8px;">ICE COFFEE C FUTURES</div>
+                    <div class="c-price-display">$3.42/lb</div>
+                    <div style="margin-top: 12px;">
+                        <span class="hedge-signal hedge-hold">🟡 HOLD</span>
+                    </div>
+                    <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">Maintain current stock — wait for dips</div>
+                    <div style="color: #888; font-size: 0.85rem;">YTD: +8.2% | Updated: 2026-06-15 15:27</div>
+                </div>
+                <div>
+                    <canvas id="cPriceChart" height="120"></canvas>
+                </div>
+            </div>
+            
+            <script>
+                const ctx = document.getElementById('cPriceChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                        datasets: [{
+                            label: 'Coffee C Price ($/lb)',
+                            data: [2.45, 2.52, 2.68, 2.89, 2.95, 3.08, 3.15, 3.22, 3.28, 3.35, 3.38, 3.42],
+                            borderColor: '#00d9ff',
+                            backgroundColor: 'rgba(0, 217, 255, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#00ff88',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return '$' + context.parsed.y.toFixed(2) + '/lb'; } } } },
+                        scales: {
+                            y: { beginAtZero: false, min: 2.0, max: 4.0, grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#888', callback: function(value) { return '$' + value.toFixed(1); } } },
+                            x: { grid: { display: false }, ticks: { color: '#888' } }
+                        }
+                    }
+                });
+            </script>
+        
+            <div style="margin-top: 32px;">
+                <div style="color: #00ff88; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>🎯 ARBITRAGE ALERTS</span>
+                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">Royal green → SF retail gaps</span>
+                </div>
+                <div class="table-container">
+                <table class="opportunity-table">
+                    <thead><tr><th>Coffee</th><th>Green Cost</th><th>COGS</th><th>SF Retail</th><th>Margin</th><th>Profit/Bag</th><th>Signal</th></tr></thead>
+                    <tbody>
+            
+                    <tr style="border-left: 3px solid #00ff88;">
+                        <td style="font-weight: 600;">Bolivia Organic Washed Yulissa Chambi</td>
+                        <td>$10.04</td>
+                        <td>$10.39</td>
+                        <td>$53.18</td>
+                        <td style="color: #00ff88; font-weight: 700;">80.5%</td>
+                        <td style="color: #00ff88;">$42.79</td>
+                        <td>✅ VIABLE</td>
+                    </tr>
+                
+                    <tr style="border-left: 3px solid #00ff88;">
+                        <td style="font-weight: 600;">Ethiopia Guji Natural Grade 1</td>
+                        <td>$10.86</td>
+                        <td>$11.11</td>
+                        <td>$40.30</td>
+                        <td style="color: #00ff88; font-weight: 700;">72.4%</td>
+                        <td style="color: #00ff88;">$29.19</td>
+                        <td>✅ VIABLE</td>
+                    </tr>
+                
+                    <tr style="border-left: 3px solid #ffaa00;">
+                        <td style="font-weight: 600;">Colombia Washed SL-28 Juliana Guevara & Wbeimar La...</td>
+                        <td>$11.81</td>
+                        <td>$11.95</td>
+                        <td>$27.59</td>
+                        <td style="color: #ffaa00; font-weight: 700;">56.7%</td>
+                        <td style="color: #ffaa00;">$15.64</td>
+                        <td>⚠️ TIGHT</td>
+                    </tr>
+                
+                    <tr style="border-left: 3px solid #ff6b6b;">
+                        <td style="font-weight: 600;">Ecuador Washed Sidra Juan Peña</td>
+                        <td>$14.50</td>
+                        <td>$14.33</td>
+                        <td>$26.47</td>
+                        <td style="color: #ff6b6b; font-weight: 700;">45.9%</td>
+                        <td style="color: #ff6b6b;">$12.14</td>
+                        <td>❌ AVOID</td>
+                    </tr>
+                
+                    <tr style="border-left: 3px solid #ff6b6b;">
+                        <td style="font-weight: 600;">Burundi Honey Peaberry Heza Washing Station</td>
+                        <td>$11.61</td>
+                        <td>$11.77</td>
+                        <td>$20.73</td>
+                        <td style="color: #ff6b6b; font-weight: 700;">43.2%</td>
+                        <td style="color: #ff6b6b;">$8.96</td>
+                        <td>❌ AVOID</td>
+                    </tr>
+                
+                    <tr style="border-left: 3px solid #ff6b6b;">
+                        <td style="font-weight: 600;">Colombia Carbonic Honey Green Apple Co-Ferment Edw...</td>
+                        <td>$16.74</td>
+                        <td>$16.31</td>
+                        <td>$27.59</td>
+                        <td style="color: #ff6b6b; font-weight: 700;">40.9%</td>
+                        <td style="color: #ff6b6b;">$11.28</td>
+                        <td>❌ AVOID</td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div style="color: #ff6b6b; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>⚠️ SCARCITY INDEX</span>
+                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">Low stock = buy signal</span>
+                </div>
+                <div class="grid-3">
+            
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #ff6b6b; border-radius: 8px; padding: 16px;">
+                        <div style="color: #ff6b6b; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">🔴 CRITICAL</div>
+                        <div style="font-weight: 600; margin-bottom: 8px; min-height: 40px;">Ecuador Washed Sidra Juan Peña</div>
+                        <div style="color: #888; font-size: 0.85rem;">Ecuador Sidra</div>
+                        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="color: #888; font-size: 0.85rem;">1 boxes (22 lbs)</span>
+                            <span style="color: #00ff88; font-weight: 600;">$14.50/lb</span>
+                        </div>
+                    </div>
+                
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #ffaa00; border-radius: 8px; padding: 16px;">
+                        <div style="color: #ffaa00; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">🟠 LOW</div>
+                        <div style="font-weight: 600; margin-bottom: 8px; min-height: 40px;">Panama Geisha Natural Finca Lerma</div>
+                        <div style="color: #888; font-size: 0.85rem;">Panama Geisha</div>
+                        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="color: #888; font-size: 0.85rem;">3 boxes (66 lbs)</span>
+                            <span style="color: #00ff88; font-weight: 600;">$45.45/lb</span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div style="color: #00d9ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>🗺️ ORIGIN CONCENTRATION</span>
+                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">SF market saturation</span>
+                </div>
+                <div class="table-container">
+                <table class="opportunity-table">
+                    <thead><tr><th>Origin</th><th>Beans</th><th>Roasters</th><th>Saturation</th><th>Avg Retail</th><th>Opportunity</th></tr></thead>
+                    <tbody>
+            
+                    <tr>
+                        <td style="font-weight: 600;">Colombia</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$27.59 - $27.59</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Nicaragua</td>
+                        <td>6</td>
+                        <td>1</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$30.06 - $30.06</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Ethiopia</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$40.30 - $40.30</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Peru</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$19.52 - $19.52</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Panama</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$56.06 - $56.06</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Costa Rica</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$46.23 - $46.23</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Rwanda</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$42.05 - $42.05</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    <tr>
+                        <td style="font-weight: 600;">Honduras</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
+                        <td>$27.11 - $27.11</td>
+                        <td style="color: #00ff88; font-weight: 600;">Target</td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div style="color: #00d9ff; font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>🏆 ROYAL COFFEE CROWN JEWELS (Live)</span>
+                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">royalcoffee.com/crown-jewels</span>
+                </div>
+                <div class="table-container">
+                <table class="opportunity-table">
+                    <thead><tr><th>Origin</th><th>Variety</th><th>Process</th><th>$/lb</th><th>Boxes</th><th>Alert</th></tr></thead>
+                    <tbody>
+            
+                    <tr>
+                        <td>Colombia</td>
+                        <td>SL28</td>
+                        <td>Washed</td>
+                        <td style="font-weight: 600; color: #00ff88;">$11.81</td>
+                        <td>6</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Colombia</td>
+                        <td>-</td>
+                        <td>Carbonic Honey</td>
+                        <td style="font-weight: 600; color: #00ff88;">$16.74</td>
+                        <td>14</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Burundi</td>
+                        <td>Peaberry</td>
+                        <td>Honey</td>
+                        <td style="font-weight: 600; color: #00ff88;">$11.61</td>
+                        <td>35</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Bolivia</td>
+                        <td>-</td>
+                        <td>Washed</td>
+                        <td style="font-weight: 600; color: #00ff88;">$10.04</td>
+                        <td>34</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Yemen</td>
+                        <td>-</td>
+                        <td>Anaerobic Natural</td>
+                        <td style="font-weight: 600; color: #00ff88;">$32.29</td>
+                        <td>48</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Ecuador</td>
+                        <td>Sidra</td>
+                        <td>Washed</td>
+                        <td style="font-weight: 600; color: #00ff88;">$14.50</td>
+                        <td>1</td>
+                        <td><span style="color: #ff6b6b; font-weight: 600;">⚠️ LOW</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Brazil</td>
+                        <td>Catuai</td>
+                        <td>Natural</td>
+                        <td style="font-weight: 600; color: #00ff88;">$9.13</td>
+                        <td>22</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Ethiopia</td>
+                        <td>Heirloom</td>
+                        <td>Natural</td>
+                        <td style="font-weight: 600; color: #00ff88;">$10.86</td>
+                        <td>18</td>
+                        <td><span style="color: #888;">✓</span></td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            
+        </div>
         
         
         <div class="section action-queue">

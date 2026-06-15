@@ -60,6 +60,18 @@
         .bag-image { width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: rgba(255,255,255,0.05); }
         .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .table-container table { min-width: 800px; }
+        .sourcing-section { background: linear-gradient(135deg, rgba(255,165,0,0.1), rgba(255,107,107,0.1)); border: 2px solid rgba(255,165,0,0.3); }
+        .hedge-signal { display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 1.1rem; }
+        .hedge-buy { background: rgba(0,255,136,0.2); color: #00ff88; }
+        .hedge-hold { background: rgba(255,217,61,0.2); color: #ffd93d; }
+        .hedge-reduce { background: rgba(255,107,107,0.2); color: #ff6b6b; }
+        .margin-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid; }
+        .margin-high { border-left-color: #00ff88; }
+        .margin-medium { border-left-color: #ffd93d; }
+        .margin-low { border-left-color: #ff6b6b; }
+        .margin-card .origin { font-weight: 600; margin-bottom: 6px; }
+        .margin-card .stats { display: flex; gap: 16px; color: #888; font-size: 0.85rem; flex-wrap: wrap; }
+        .c-price-display { font-size: 2.5rem; font-weight: 700; color: #00d9ff; }
         @media (max-width: 768px) {
             body { padding: 12px; }
             .header h1 { font-size: 1.8rem; }
@@ -73,10 +85,12 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 15, 2026 at 01:49 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 15, 2026 at 02:11 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
+        
+        
         <div class="section action-queue">
             <div class="section-title">THIS WEEK'S ACTIONS</div>
             

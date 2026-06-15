@@ -85,7 +85,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 15, 2026 at 02:17 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 15, 2026 at 02:29 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -93,15 +93,72 @@
         <div class="section sourcing-section">
             <div class="section-title">📈 SOURCING INTELLIGENCE</div>
             
-            <div style="margin-bottom: 24px;">
-                <div style="color: #888; font-size: 0.9rem; margin-bottom: 8px;">ICE COFFEE C FUTURES</div>
-                <div class="c-price-display">$3.42/lb</div>
-                <div style="margin-top: 12px;">
-                    <span class="hedge-signal hedge-hold">🟡 HOLD</span>
+            <div class="grid-2" style="margin-bottom: 24px;">
+                <div>
+                    <div style="color: #888; font-size: 0.9rem; margin-bottom: 8px;">ICE COFFEE C FUTURES</div>
+                    <div class="c-price-display">$3.42/lb</div>
+                    <div style="margin-top: 12px;">
+                        <span class="hedge-signal hedge-hold">🟡 HOLD</span>
+                    </div>
+                    <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">Maintain current stock — wait for dips</div>
+                    <div style="color: #888; font-size: 0.85rem;">YTD: +8.2% | Updated: 2026-06-15 14:29</div>
                 </div>
-                <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">Maintain current stock — wait for dips</div>
-                <div style="color: #888; font-size: 0.85rem;">YTD: +8.2% | Updated: 2026-06-15 14:17</div>
+                <div>
+                    <canvas id="cPriceChart" height="120"></canvas>
+                </div>
             </div>
+            
+            <script>
+                const ctx = document.getElementById('cPriceChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                        datasets: [{
+                            label: 'Coffee C Price ($/lb)',
+                            data: [2.45, 2.52, 2.68, 2.89, 2.95, 3.08, 3.15, 3.22, 3.28, 3.35, 3.38, 3.42],
+                            borderColor: '#00d9ff',
+                            backgroundColor: 'rgba(0, 217, 255, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#00ff88',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return '$' + context.parsed.y.toFixed(2) + '/lb';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 2.0,
+                                max: 4.0,
+                                grid: { color: 'rgba(255,255,255,0.1)' },
+                                ticks: {
+                                    color: '#888',
+                                    callback: function(value) { return '$' + value.toFixed(1); }
+                                }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#888' }
+                            }
+                        }
+                    }
+                });
+            </script>
             
             <div style="margin-bottom: 24px;">
                 <div style="color: #00d9ff; font-size: 1rem; font-weight: 600; margin-bottom: 12px;">💰 TOP MARGIN OPPORTUNITIES</div>

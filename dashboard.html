@@ -40,6 +40,10 @@
         .competitor-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
         .competitor-card .name { font-weight: 600; margin-bottom: 8px; }
         .competitor-card .stats { display: flex; gap: 16px; color: #888; font-size: 0.9rem; flex-wrap: wrap; }
+        .score-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
+        .score-high { background: rgba(0,255,136,0.2); color: #00ff88; }
+        .score-medium { background: rgba(255,217,61,0.2); color: #ffd93d; }
+        .score-low { background: rgba(255,107,107,0.2); color: #ff6b6b; }
         .picks-section { background: linear-gradient(135deg, rgba(199,146,234,0.1), rgba(0,217,255,0.1)); border: 2px solid rgba(199,146,234,0.3); }
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
         .pick-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); }
@@ -69,7 +73,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 15, 2026 at 01:35 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 15, 2026 at 01:49 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -86,6 +90,12 @@
             <div class="title">⚡ Experimental Processes</div>
             <div class="details">3 wild/strange processes available</div>
             <div class="action">→ Consider for limited drop or blending trials</div>
+        </div>
+        
+        <div class="action-item priority-1">
+            <div class="title">⚡ High-Value Opportunities</div>
+            <div class="details">2 origin/variety combinations scoring 8+</div>
+            <div class="action">→ Review Opportunity Score table</div>
         </div>
         
         <div class="action-item priority-3">
@@ -112,6 +122,88 @@
             <table class="opportunity-table">
                 <tr><th>Timeframe</th><th>New Releases</th><th>Active Roasters</th><th>Avg Price</th></tr>
                 <tr><td><strong>24 Hours</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>7 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>30 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>90 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr>
+            </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🎯 OPPORTUNITY SCORE (Top 10)</div>
+            <div class="table-container">
+            <table class="opportunity-table">
+                <thead><tr><th>Origin</th><th>Variety</th><th>Process</th><th>Releases</th><th>Roasters</th><th>Price</th><th>Score</th><th>Action</th></tr></thead>
+                <tbody>
+                
+        <tr>
+            <td>Panama</td><td>Geisha</td><td>Anaerobic, Washed</td>
+            <td>1</td><td>1</td><td>$91.24</td>
+            <td><span class="score-badge score-high">🟡 9.1</span></td>
+            <td>BUY</td>
+        </tr>
+        
+        <tr>
+            <td>Costa Rica</td><td>Caturra</td><td>Natural</td>
+            <td>1</td><td>1</td><td>$83.30</td>
+            <td><span class="score-badge score-high">🟡 8.7</span></td>
+            <td>BUY</td>
+        </tr>
+        
+        <tr>
+            <td>El Salvador</td><td>Pacas</td><td>Honey, Washed</td>
+            <td>1</td><td>1</td><td>$61.29</td>
+            <td><span class="score-badge score-medium">🟡 7.6</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Ethiopia</td><td>Heirlooms</td><td>Natural</td>
+            <td>1</td><td>1</td><td>$61.29</td>
+            <td><span class="score-badge score-medium">🟡 7.6</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Ethiopia, Costa Rica, Kenya</td><td>Blend</td><td>Unknown</td>
+            <td>1</td><td>1</td><td>$60.13</td>
+            <td><span class="score-badge score-medium">🟡 7.5</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Colombia</td><td>Unknown</td><td>Anaerobic, Semi Washed</td>
+            <td>1</td><td>1</td><td>$57.81</td>
+            <td><span class="score-badge score-medium">🟡 7.4</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Ethiopia, Honduras, Rwanda</td><td>Blend</td><td>Natural, Washed</td>
+            <td>1</td><td>1</td><td>$53.76</td>
+            <td><span class="score-badge score-medium">🟡 7.2</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Bolivia</td><td>Catuai, Typica</td><td>Natural</td>
+            <td>1</td><td>1</td><td>$53.18</td>
+            <td><span class="score-badge score-medium">🟡 7.2</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Brazil, Nicaragua, El Salvador, Peru</td><td>Blend</td><td>Natural, Washed</td>
+            <td>1</td><td>1</td><td>$49.47</td>
+            <td><span class="score-badge score-medium">🟡 7.0</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+        <tr>
+            <td>Ethiopia, Colombia</td><td>Blend</td><td>Natural, Washed</td>
+            <td>1</td><td>1</td><td>$46.23</td>
+            <td><span class="score-badge score-medium">🟡 6.8</span></td>
+            <td>CONSIDER</td>
+        </tr>
+        
+                </tbody>
             </table>
             </div>
         </div>

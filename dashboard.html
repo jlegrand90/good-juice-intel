@@ -67,7 +67,8 @@
         .tier-bar .count { width: 100px; text-align: right; }
         .picks-section { background: linear-gradient(135deg, rgba(199,146,234,0.1), rgba(0,217,255,0.1)); border: 2px solid rgba(199,146,234,0.3); }
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-        .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 600px) { .picks-grid { grid-template-columns: 1fr; } }
+        .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px; }
         .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
         .pick-card .pick-roaster, .leader-card .leader-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
         .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
@@ -98,7 +99,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 16, 2026 at 11:47 AM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 16, 2026 at 12:01 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -311,12 +312,7 @@
             <div class="picks-grid">
                 <div class="category-title">🍓 FRUITY & FLORAL</div>
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">FE</div>
-                <div class="placeholder-roaster">Five Elephant</div>
-            </div>
-            
+            <img src="bag-images/32198.jpg" alt="BRAZIL Fazenda Ambiental Fortaleza – Filter" class="bag-image">
             <div class="pick-name">BRAZIL Fazenda Ambiental Fortaleza – Filter</div>
             <div class="pick-roaster">Five Elephant</div>
             <div class="pick-details">Brazil | Arara | Natural</div>
@@ -325,12 +321,7 @@
         </div>
         
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">FE</div>
-                <div class="placeholder-roaster">Five Elephant</div>
-            </div>
-            
+            <img src="bag-images/32197.jpg" alt="Colombia La Violeta Pacamara - Filter" class="bag-image">
             <div class="pick-name">Colombia La Violeta Pacamara - Filter</div>
             <div class="pick-roaster">Five Elephant</div>
             <div class="pick-details">Colombia | Pacamara | Natural</div>
@@ -501,4 +492,4 @@
         </div>
     </div>
 </body>
-</html><!-- cache-bust 1781635689 -->
+</html>

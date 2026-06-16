@@ -19,6 +19,8 @@
         .action-item.priority-1 { border-left-color: #00ff88; }
         .action-item.priority-2 { border-left-color: #00d9ff; }
         .action-item.priority-3 { border-left-color: #ff6b6b; }
+        .action-item.priority-4 { border-left-color: #ffd93d; }
+        .action-item.priority-5 { border-left-color: #c792ea; }
         .action-item .title { font-weight: 600; margin-bottom: 6px; }
         .action-item .details { color: #888; font-size: 0.9rem; margin-bottom: 8px; }
         .action-item .action { color: #00d9ff; font-size: 0.95rem; }
@@ -30,48 +32,48 @@
         .opportunity-table th, .opportunity-table td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .opportunity-table th { color: #888; font-size: 0.85rem; text-transform: uppercase; }
         .opportunity-table tr:hover { background: rgba(255,255,255,0.05); }
+        .score-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
+        .score-high { background: rgba(0,255,136,0.2); color: #00ff88; }
+        .score-medium { background: rgba(255,217,61,0.2); color: #ffd93d; }
+        .score-low { background: rgba(255,107,107,0.2); color: #ff6b6b; }
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; }
+        .chart-container { background: rgba(0,0,0,0.2); border-radius: 8px; padding: 20px; height: 300px; }
         .harvest-calendar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
         .harvest-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; }
         .harvest-card h4 { color: #888; margin-bottom: 12px; font-size: 0.9rem; }
         .harvest-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
         .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .dot.green { background: #00ff88; } .dot.yellow { background: #ffd93d; }
+        .dot.green { background: #00ff88; } .dot.yellow { background: #ffd93d; } .dot.red { background: #ff6b6b; }
         .competitor-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
         .competitor-card .name { font-weight: 600; margin-bottom: 8px; }
         .competitor-card .stats { display: flex; gap: 16px; color: #888; font-size: 0.9rem; flex-wrap: wrap; }
-        .score-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
-        .score-high { background: rgba(0,255,136,0.2); color: #00ff88; }
-        .score-medium { background: rgba(255,217,61,0.2); color: #ffd93d; }
-        .score-low { background: rgba(255,107,107,0.2); color: #ff6b6b; }
+        .competitor-card .weakness { color: #00d9ff; margin-top: 8px; }
+        .trend-category { margin-bottom: 20px; }
+        .trend-category h4 { margin-bottom: 10px; }
+        .trend-item { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .tier-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .tier-bar .label { width: 80px; font-weight: 600; }
+        .tier-bar .bar { flex: 1; height: 24px; background: rgba(0,0,0,0.3); border-radius: 4px; overflow: hidden; }
+        .tier-bar .fill { height: 100%; background: linear-gradient(90deg, #00d9ff, #00ff88); }
+        .tier-bar .count { width: 100px; text-align: right; }
         .picks-section { background: linear-gradient(135deg, rgba(199,146,234,0.1), rgba(0,217,255,0.1)); border: 2px solid rgba(199,146,234,0.3); }
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-        .pick-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); }
-        .pick-card .pick-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
-        .pick-card .pick-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
-        .pick-card .pick-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
-        .pick-card .pick-price { font-size: 1.2rem; font-weight: 700; color: #00ff88; margin-bottom: 12px; }
+        .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
+        .pick-card .pick-roaster, .leader-card .leader-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
+        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
+        .pick-card .pick-price, .leader-card .leader-price { font-size: 1.2rem; font-weight: 700; color: #00ff88; margin-bottom: 12px; }
+        .leader-card .leader-stats { color: #888; font-size: 0.85rem; margin-bottom: 12px; }
         .buy-btn { display: inline-block; padding: 8px 16px; background: linear-gradient(90deg, #00d9ff, #00ff88); color: #1a1a2e; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
         .buy-btn:hover { opacity: 0.9; }
         .category-title { font-size: 1rem; color: #00d9ff; margin: 20px 0 12px 0; font-weight: 600; }
-        .bag-placeholder { width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,217,255,0.1), rgba(0,255,136,0.1)); border-radius: 8px; margin-bottom: 12px; }
+        .bag-image-container { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; }
+        .bag-image { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .bag-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,217,255,0.1), rgba(0,255,136,0.1)); }
         .placeholder-initials { font-size: 2.5rem; font-weight: 700; color: #00d9ff; letter-spacing: 2px; }
         .placeholder-roaster { font-size: 0.75rem; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
-        .bag-image { width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: rgba(255,255,255,0.05); }
         .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .table-container table { min-width: 800px; }
-        .sourcing-section { background: linear-gradient(135deg, rgba(255,165,0,0.1), rgba(255,107,107,0.1)); border: 2px solid rgba(255,165,0,0.3); }
-        .hedge-signal { display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 1.1rem; }
-        .hedge-buy { background: rgba(0,255,136,0.2); color: #00ff88; }
-        .hedge-hold { background: rgba(255,217,61,0.2); color: #ffd93d; }
-        .hedge-reduce { background: rgba(255,107,107,0.2); color: #ff6b6b; }
-        .margin-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid; }
-        .margin-high { border-left-color: #00ff88; }
-        .margin-medium { border-left-color: #ffd93d; }
-        .margin-low { border-left-color: #ff6b6b; }
-        .margin-card .origin { font-weight: 600; margin-bottom: 6px; }
-        .margin-card .stats { display: flex; gap: 16px; color: #888; font-size: 0.85rem; flex-wrap: wrap; }
-        .c-price-display { font-size: 2.5rem; font-weight: 700; color: #00d9ff; }
         @media (max-width: 768px) {
             body { padding: 12px; }
             .header h1 { font-size: 1.8rem; }
@@ -79,372 +81,30 @@
             .grid-2 { grid-template-columns: 1fr; }
             .picks-grid { grid-template-columns: 1fr; }
             .stat-card .value { font-size: 2rem; }
+            .action-item .title { font-size: 0.95rem; }
+            .action-item .details, .action-item .action { font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 15, 2026 at 03:27 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 16, 2026 at 09:05 AM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
-        
-        <div class="section sourcing-section">
-            <div class="section-title">📈 SOURCING INTELLIGENCE</div>
-            
-            <div class="grid-2" style="margin-bottom: 24px;">
-                <div>
-                    <div style="color: #888; font-size: 0.9rem; margin-bottom: 8px;">ICE COFFEE C FUTURES</div>
-                    <div class="c-price-display">$3.42/lb</div>
-                    <div style="margin-top: 12px;">
-                        <span class="hedge-signal hedge-hold">🟡 HOLD</span>
-                    </div>
-                    <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">Maintain current stock — wait for dips</div>
-                    <div style="color: #888; font-size: 0.85rem;">YTD: +8.2% | Updated: 2026-06-15 15:27</div>
-                </div>
-                <div>
-                    <canvas id="cPriceChart" height="120"></canvas>
-                </div>
-            </div>
-            
-            <script>
-                const ctx = document.getElementById('cPriceChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-                        datasets: [{
-                            label: 'Coffee C Price ($/lb)',
-                            data: [2.45, 2.52, 2.68, 2.89, 2.95, 3.08, 3.15, 3.22, 3.28, 3.35, 3.38, 3.42],
-                            borderColor: '#00d9ff',
-                            backgroundColor: 'rgba(0, 217, 255, 0.1)',
-                            fill: true,
-                            tension: 0.4,
-                            pointRadius: 4,
-                            pointBackgroundColor: '#00ff88',
-                            pointBorderColor: '#fff',
-                            pointBorderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return '$' + context.parsed.y.toFixed(2) + '/lb'; } } } },
-                        scales: {
-                            y: { beginAtZero: false, min: 2.0, max: 4.0, grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#888', callback: function(value) { return '$' + value.toFixed(1); } } },
-                            x: { grid: { display: false }, ticks: { color: '#888' } }
-                        }
-                    }
-                });
-            </script>
-        
-            <div style="margin-top: 32px;">
-                <div style="color: #00ff88; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>🎯 ARBITRAGE ALERTS</span>
-                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">Royal green → SF retail gaps</span>
-                </div>
-                <div class="table-container">
-                <table class="opportunity-table">
-                    <thead><tr><th>Coffee</th><th>Green Cost</th><th>COGS</th><th>SF Retail</th><th>Margin</th><th>Profit/Bag</th><th>Signal</th></tr></thead>
-                    <tbody>
-            
-                    <tr style="border-left: 3px solid #00ff88;">
-                        <td style="font-weight: 600;">Bolivia Organic Washed Yulissa Chambi</td>
-                        <td>$10.04</td>
-                        <td>$10.39</td>
-                        <td>$53.18</td>
-                        <td style="color: #00ff88; font-weight: 700;">80.5%</td>
-                        <td style="color: #00ff88;">$42.79</td>
-                        <td>✅ VIABLE</td>
-                    </tr>
-                
-                    <tr style="border-left: 3px solid #00ff88;">
-                        <td style="font-weight: 600;">Ethiopia Guji Natural Grade 1</td>
-                        <td>$10.86</td>
-                        <td>$11.11</td>
-                        <td>$40.30</td>
-                        <td style="color: #00ff88; font-weight: 700;">72.4%</td>
-                        <td style="color: #00ff88;">$29.19</td>
-                        <td>✅ VIABLE</td>
-                    </tr>
-                
-                    <tr style="border-left: 3px solid #ffaa00;">
-                        <td style="font-weight: 600;">Colombia Washed SL-28 Juliana Guevara & Wbeimar La...</td>
-                        <td>$11.81</td>
-                        <td>$11.95</td>
-                        <td>$27.59</td>
-                        <td style="color: #ffaa00; font-weight: 700;">56.7%</td>
-                        <td style="color: #ffaa00;">$15.64</td>
-                        <td>⚠️ TIGHT</td>
-                    </tr>
-                
-                    <tr style="border-left: 3px solid #ff6b6b;">
-                        <td style="font-weight: 600;">Ecuador Washed Sidra Juan Peña</td>
-                        <td>$14.50</td>
-                        <td>$14.33</td>
-                        <td>$26.47</td>
-                        <td style="color: #ff6b6b; font-weight: 700;">45.9%</td>
-                        <td style="color: #ff6b6b;">$12.14</td>
-                        <td>❌ AVOID</td>
-                    </tr>
-                
-                    <tr style="border-left: 3px solid #ff6b6b;">
-                        <td style="font-weight: 600;">Burundi Honey Peaberry Heza Washing Station</td>
-                        <td>$11.61</td>
-                        <td>$11.77</td>
-                        <td>$20.73</td>
-                        <td style="color: #ff6b6b; font-weight: 700;">43.2%</td>
-                        <td style="color: #ff6b6b;">$8.96</td>
-                        <td>❌ AVOID</td>
-                    </tr>
-                
-                    <tr style="border-left: 3px solid #ff6b6b;">
-                        <td style="font-weight: 600;">Colombia Carbonic Honey Green Apple Co-Ferment Edw...</td>
-                        <td>$16.74</td>
-                        <td>$16.31</td>
-                        <td>$27.59</td>
-                        <td style="color: #ff6b6b; font-weight: 700;">40.9%</td>
-                        <td style="color: #ff6b6b;">$11.28</td>
-                        <td>❌ AVOID</td>
-                    </tr>
-                
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            
-            <div style="margin-top: 32px;">
-                <div style="color: #ff6b6b; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>⚠️ SCARCITY INDEX</span>
-                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">Low stock = buy signal</span>
-                </div>
-                <div class="grid-3">
-            
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #ff6b6b; border-radius: 8px; padding: 16px;">
-                        <div style="color: #ff6b6b; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">🔴 CRITICAL</div>
-                        <div style="font-weight: 600; margin-bottom: 8px; min-height: 40px;">Ecuador Washed Sidra Juan Peña</div>
-                        <div style="color: #888; font-size: 0.85rem;">Ecuador Sidra</div>
-                        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="color: #888; font-size: 0.85rem;">1 boxes (22 lbs)</span>
-                            <span style="color: #00ff88; font-weight: 600;">$14.50/lb</span>
-                        </div>
-                    </div>
-                
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #ffaa00; border-radius: 8px; padding: 16px;">
-                        <div style="color: #ffaa00; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">🟠 LOW</div>
-                        <div style="font-weight: 600; margin-bottom: 8px; min-height: 40px;">Panama Geisha Natural Finca Lerma</div>
-                        <div style="color: #888; font-size: 0.85rem;">Panama Geisha</div>
-                        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="color: #888; font-size: 0.85rem;">3 boxes (66 lbs)</span>
-                            <span style="color: #00ff88; font-weight: 600;">$45.45/lb</span>
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-            
-            <div style="margin-top: 32px;">
-                <div style="color: #00d9ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>🗺️ ORIGIN CONCENTRATION</span>
-                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">SF market saturation</span>
-                </div>
-                <div class="table-container">
-                <table class="opportunity-table">
-                    <thead><tr><th>Origin</th><th>Beans</th><th>Roasters</th><th>Saturation</th><th>Avg Retail</th><th>Opportunity</th></tr></thead>
-                    <tbody>
-            
-                    <tr>
-                        <td style="font-weight: 600;">Colombia</td>
-                        <td>10</td>
-                        <td>5</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$27.59 - $27.59</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Nicaragua</td>
-                        <td>6</td>
-                        <td>1</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$30.06 - $30.06</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Ethiopia</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$40.30 - $40.30</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Peru</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$19.52 - $19.52</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Panama</td>
-                        <td>4</td>
-                        <td>2</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$56.06 - $56.06</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Costa Rica</td>
-                        <td>3</td>
-                        <td>1</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$46.23 - $46.23</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Rwanda</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$42.05 - $42.05</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    <tr>
-                        <td style="font-weight: 600;">Honduras</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td><span style="color: #00ff88;">● 🟢 Underserved</span></td>
-                        <td>$27.11 - $27.11</td>
-                        <td style="color: #00ff88; font-weight: 600;">Target</td>
-                    </tr>
-                
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            
-            <div style="margin-top: 32px;">
-                <div style="color: #00d9ff; font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>🏆 ROYAL COFFEE CROWN JEWELS (Live)</span>
-                    <span style="font-size: 0.85rem; color: #888; font-weight: 400;">royalcoffee.com/crown-jewels</span>
-                </div>
-                <div class="table-container">
-                <table class="opportunity-table">
-                    <thead><tr><th>Origin</th><th>Variety</th><th>Process</th><th>$/lb</th><th>Boxes</th><th>Alert</th></tr></thead>
-                    <tbody>
-            
-                    <tr>
-                        <td>Colombia</td>
-                        <td>SL28</td>
-                        <td>Washed</td>
-                        <td style="font-weight: 600; color: #00ff88;">$11.81</td>
-                        <td>6</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Colombia</td>
-                        <td>-</td>
-                        <td>Carbonic Honey</td>
-                        <td style="font-weight: 600; color: #00ff88;">$16.74</td>
-                        <td>14</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Burundi</td>
-                        <td>Peaberry</td>
-                        <td>Honey</td>
-                        <td style="font-weight: 600; color: #00ff88;">$11.61</td>
-                        <td>35</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Bolivia</td>
-                        <td>-</td>
-                        <td>Washed</td>
-                        <td style="font-weight: 600; color: #00ff88;">$10.04</td>
-                        <td>34</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Yemen</td>
-                        <td>-</td>
-                        <td>Anaerobic Natural</td>
-                        <td style="font-weight: 600; color: #00ff88;">$32.29</td>
-                        <td>48</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Ecuador</td>
-                        <td>Sidra</td>
-                        <td>Washed</td>
-                        <td style="font-weight: 600; color: #00ff88;">$14.50</td>
-                        <td>1</td>
-                        <td><span style="color: #ff6b6b; font-weight: 600;">⚠️ LOW</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Brazil</td>
-                        <td>Catuai</td>
-                        <td>Natural</td>
-                        <td style="font-weight: 600; color: #00ff88;">$9.13</td>
-                        <td>22</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    <tr>
-                        <td>Ethiopia</td>
-                        <td>Heirloom</td>
-                        <td>Natural</td>
-                        <td style="font-weight: 600; color: #00ff88;">$10.86</td>
-                        <td>18</td>
-                        <td><span style="color: #888;">✓</span></td>
-                    </tr>
-                
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            
-        </div>
-        
-        
         <div class="section action-queue">
             <div class="section-title">THIS WEEK'S ACTIONS</div>
             
-        <div class="action-item priority-1">
-            <div class="title">⚡ New Releases to Evaluate</div>
-            <div class="details">4 beans match your fruity/high-acid profile</div>
-            <div class="action">→ Review in Picks section and consider sampling</div>
-        </div>
-        
         <div class="action-item priority-2">
-            <div class="title">⚡ Experimental Processes</div>
-            <div class="details">3 wild/strange processes available</div>
-            <div class="action">→ Consider for limited drop or blending trials</div>
-        </div>
-        
-        <div class="action-item priority-1">
-            <div class="title">⚡ High-Value Opportunities</div>
-            <div class="details">2 origin/variety combinations scoring 8+</div>
-            <div class="action">→ Review Opportunity Score table</div>
+            <div class="title">⚡ Limited Availability Alerts</div>
+            <div class="details">10 single-origin, single-roaster releases detected</div>
+            <div class="action">→ These may sell out quickly - evaluate for acquisition</div>
         </div>
         
         <div class="action-item priority-3">
             <div class="title">⚡ Competitor Activity</div>
-            <div class="details">10 roasters with 3+ releases</div>
+            <div class="details">10 roasters with 3+ releases this period</div>
             <div class="action">→ Monitor: Terres de Café, Onyx, La Cabra</div>
         </div>
         
@@ -453,9 +113,9 @@
         <div class="section">
             <div class="section-title">KNOWLEDGE BASE</div>
             <div class="stats-grid">
-                <div class="stat-card"><div class="value">150</div><div class="label">Beans</div></div>
+                <div class="stat-card"><div class="value">225</div><div class="label">Beans</div></div>
                 <div class="stat-card"><div class="value">20</div><div class="label">Roasters</div></div>
-                <div class="stat-card"><div class="value">20</div><div class="label">Origins</div></div>
+                <div class="stat-card"><div class="value">23</div><div class="label">Origins</div></div>
                 <div class="stat-card"><div class="value">26</div><div class="label">Varieties</div></div>
             </div>
         </div>
@@ -464,87 +124,92 @@
             <div class="section-title">MARKET ACTIVITY (Multi-Timeframe)</div>
             <div class="table-container">
             <table class="opportunity-table">
-                <tr><th>Timeframe</th><th>New Releases</th><th>Active Roasters</th><th>Avg Price</th></tr>
-                <tr><td><strong>24 Hours</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>7 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>30 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr><tr><td><strong>90 Days</strong></td><td>150</td><td>20</td><td>$11.45</td></tr>
+                <tr>
+                    <th>Timeframe</th>
+                    <th>New Releases</th>
+                    <th>Active Roasters</th>
+                    <th>Avg Price</th>
+                </tr>
+                <tr><td><strong>24 Hours</strong></td><td>155</td><td>20</td><td>$0.00</td></tr><tr><td><strong>7 Days</strong></td><td>161</td><td>20</td><td>$0.00</td></tr><tr><td><strong>30 Days</strong></td><td>188</td><td>20</td><td>$0.00</td></tr><tr><td><strong>90 Days</strong></td><td>225</td><td>20</td><td>$0.00</td></tr>
             </table>
             </div>
         </div>
         
         <div class="section">
-            <div class="section-title">🎯 OPPORTUNITY SCORE (Top 10)</div>
+            <div class="section-title">OPPORTUNITY SCORE (Top 10)</div>
             <div class="table-container">
             <table class="opportunity-table">
                 <thead><tr><th>Origin</th><th>Variety</th><th>Process</th><th>Releases</th><th>Roasters</th><th>Price</th><th>Score</th><th>Action</th></tr></thead>
                 <tbody>
                 
         <tr>
-            <td>Panama</td><td>Geisha</td><td>Anaerobic, Washed</td>
-            <td>1</td><td>1</td><td>$91.24</td>
-            <td><span class="score-badge score-high">🟡 9.1</span></td>
-            <td>BUY</td>
+            <td>None</td><td>Unknown</td><td>Ethyl Acetate Decaf</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Costa Rica</td><td>Caturra</td><td>Natural</td>
-            <td>1</td><td>1</td><td>$83.30</td>
-            <td><span class="score-badge score-high">🟡 8.7</span></td>
-            <td>BUY</td>
+            <td></td><td>Bourbon</td><td>Honey</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>El Salvador</td><td>Pacas</td><td>Honey, Washed</td>
-            <td>1</td><td>1</td><td>$61.29</td>
-            <td><span class="score-badge score-medium">🟡 7.6</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Catuai</td><td>Carbonic Maceration</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Ethiopia</td><td>Heirlooms</td><td>Natural</td>
-            <td>1</td><td>1</td><td>$61.29</td>
-            <td><span class="score-badge score-medium">🟡 7.6</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Caturra</td><td>Carbonic Maceration</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Ethiopia, Costa Rica, Kenya</td><td>Blend</td><td>Unknown</td>
-            <td>1</td><td>1</td><td>$60.13</td>
-            <td><span class="score-badge score-medium">🟡 7.5</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Caturra</td><td>Double Fermentation</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Colombia</td><td>Unknown</td><td>Anaerobic, Semi Washed</td>
-            <td>1</td><td>1</td><td>$57.81</td>
-            <td><span class="score-badge score-medium">🟡 7.4</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Caturra</td><td>Natural</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Ethiopia, Honduras, Rwanda</td><td>Blend</td><td>Natural, Washed</td>
-            <td>1</td><td>1</td><td>$53.76</td>
-            <td><span class="score-badge score-medium">🟡 7.2</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Geisha</td><td>Anaerobic</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Bolivia</td><td>Catuai, Typica</td><td>Natural</td>
-            <td>1</td><td>1</td><td>$53.18</td>
-            <td><span class="score-badge score-medium">🟡 7.2</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Pacamara</td><td>Carbonic Maceration</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Brazil, Nicaragua, El Salvador, Peru</td><td>Blend</td><td>Natural, Washed</td>
-            <td>1</td><td>1</td><td>$49.47</td>
-            <td><span class="score-badge score-medium">🟡 7.0</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Pacamara</td><td>Double Fermentation</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
         <tr>
-            <td>Ethiopia, Colombia</td><td>Blend</td><td>Natural, Washed</td>
-            <td>1</td><td>1</td><td>$46.23</td>
-            <td><span class="score-badge score-medium">🟡 6.8</span></td>
-            <td>CONSIDER</td>
+            <td></td><td>Pacamara</td><td>Honey</td>
+            <td>1</td><td>1</td><td>$0.00</td>
+            <td><span class="score-badge score-low">🟡 4.5</span></td>
+            <td>WATCH</td>
         </tr>
         
                 </tbody>
@@ -553,97 +218,53 @@
         </div>
         
         <div class="section picks-section">
-            <div class="section-title">🎯 JOSHUA'S PICKS</div>
+            <div class="section-title">🎯 THIS WEEK'S PICKS</div>
             <div class="picks-grid">
-                <div class="category-title">🍓 FRUITY & HIGH ACID</div>
+                <div class="category-title">🍓 FRUITY & FLORAL</div>
+        <div class="pick-card">
+            
+            <div class="bag-placeholder">
+                <div class="placeholder-initials">V</div>
+                <div class="placeholder-roaster">Verve</div>
+            </div>
+            
+            <div class="pick-name">Guatemala Bourbon</div>
+            <div class="pick-roaster">Verve</div>
+            <div class="pick-details">Guatemala | Sidra | Natural</div>
+            <div class="pick-price">$0.00</div>
+            <a href="https://beanbase.com/coffee/58" target="_blank" class="buy-btn">View →</a>
+        </div>
+        
+        <div class="pick-card">
+            
+            <div class="bag-placeholder">
+                <div class="placeholder-initials">O</div>
+                <div class="placeholder-roaster">Onyx</div>
+            </div>
+            
+            <div class="pick-name">Guatemala SL34</div>
+            <div class="pick-roaster">Onyx</div>
+            <div class="pick-details">Panama | Typica | Natural</div>
+            <div class="pick-price">$0.00</div>
+            <a href="https://beanbase.com/coffee/64" target="_blank" class="buy-btn">View →</a>
+        </div>
+        
         <div class="pick-card">
             <img src="bag-images/32139.jpg" alt="Coffee Volcan Azul Caturra" class="bag-image">
             <div class="pick-name">Coffee Volcan Azul Caturra</div>
             <div class="pick-roaster">Terres de Café</div>
             <div class="pick-details">Costa Rica | Caturra | Natural</div>
-            <div class="pick-price">$83.30</div>
+            <div class="pick-price">$0.00</div>
             <a href="https://www.terresdecafe.com/en/beans-coffee/1824-27829-coffee-volcan-azul-caturra-kg.html#/35-coffee_packaging-1kg/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
         </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32137.jpg" alt="Coffee Yeti Organic" class="bag-image">
-            <div class="pick-name">Coffee Yeti Organic</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Ethiopia | Unknown | Washed</div>
-            <div class="pick-price">$69.40</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1134-20348-coffee-yeti-organic-3700926140114.html#/35-coffee_packaging-1kg/79-grinding-beans/35-coffee_packaging-1kg/79-grinding-beans" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32132.jpg" alt="Finca Santa Maria Geisha Washed" class="bag-image">
-            <div class="pick-name">Finca Santa Maria Geisha Washed</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Colombia | Geisha | Washed, Shade-dried</div>
-            <div class="pick-price">$30.01</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1697-25755-coffee-finca-santa-maria-geisha-washed-3700926147205.html#/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32126.jpg" alt="Coffee Amazalia Estate - Pacamara Washed" class="bag-image">
-            <div class="pick-name">Coffee Amazalia Estate - Pacamara Washed</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Ecuador | Pacamara | Washed</div>
-            <div class="pick-price">$21.78</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1396-21765-coffee-amazalia.html#/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
-        </div>
-        <div class="category-title">🧪 WILD & STRANGE</div>
+        <div class="category-title">🧪 WILD PROCESSES</div>
         <div class="pick-card">
             <img src="bag-images/32140.jpg" alt="Kindergarten Candy" class="bag-image">
             <div class="pick-name">Kindergarten Candy</div>
             <div class="pick-roaster">Promethium Coffee</div>
             <div class="pick-details">Colombia | Caturra | Washed, Extended Fermentation, Anaerobic</div>
-            <div class="pick-price">$31.00</div>
+            <div class="pick-price">$0.00</div>
             <a href="https://promethiumcoffee.com/products/kindergarden-candy-200g" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32135.jpg" alt="Hunter Tedman - Hacienda Barbara, Las Brujas - Geisha Anaerobic Natural - Légendes" class="bag-image">
-            <div class="pick-name">Hunter Tedman - Hacienda Barbara, Las Brujas - Geisha Anaerobic Natural - Légendes</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Panama | Geisha | Natural, Anaerobic</div>
-            <div class="pick-price">$46.23</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/2001-29336-hunter-tedman-hacienda-barbara-las-brujas-geisha-anaerobic-natural-legendes-3700926147236.html#/79-grinding-beans/184-roasting-uniroast/433-coffee_packaging-100g" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32128.jpg" alt="Bourbon Santander Bio" class="bag-image">
-            <div class="pick-name">Bourbon Santander Bio</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Colombia | Red Bourbon | Natural, Anaerobic</div>
-            <div class="pick-price">$26.53</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1961-28866-coffee-bourbon-santander-bio.html#/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
-        </div>
-        <div class="category-title">🍫 CLASSIC CHOCOLATE</div>
-        <div class="pick-card">
-            <img src="bag-images/32139.jpg" alt="Coffee Volcan Azul Caturra" class="bag-image">
-            <div class="pick-name">Coffee Volcan Azul Caturra</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Costa Rica | Caturra | Natural</div>
-            <div class="pick-price">$83.30</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1824-27829-coffee-volcan-azul-caturra-kg.html#/35-coffee_packaging-1kg/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32138.jpg" alt="Coffee Los Pinos - KG" class="bag-image">
-            <div class="pick-name">Coffee Los Pinos - KG</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Nicaragua | Blend | Washed</div>
-            <div class="pick-price">$78.32</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/2003-29360-coffee-los-pinos-kg.html#/35-coffee_packaging-1kg/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
-        </div>
-        
-        <div class="pick-card">
-            <img src="bag-images/32137.jpg" alt="Coffee Yeti Organic" class="bag-image">
-            <div class="pick-name">Coffee Yeti Organic</div>
-            <div class="pick-roaster">Terres de Café</div>
-            <div class="pick-details">Ethiopia | Unknown | Washed</div>
-            <div class="pick-price">$69.40</div>
-            <a href="https://www.terresdecafe.com/en/beans-coffee/1134-20348-coffee-yeti-organic-3700926140114.html#/35-coffee_packaging-1kg/79-grinding-beans/35-coffee_packaging-1kg/79-grinding-beans" target="_blank" class="buy-btn">View →</a>
         </div>
         
             </div>
@@ -657,7 +278,7 @@
             <div class="name">Terres de Café</div>
             <div class="stats">
                 <span>📦 37 releases</span>
-                <span>💰 $37.31</span>
+                <span>💰 $0.00</span>
                 <span>🌍 16 origins</span>
             </div>
         </div>
@@ -665,36 +286,36 @@
         <div class="competitor-card">
             <div class="name">Onyx</div>
             <div class="stats">
-                <span>📦 13 releases</span>
+                <span>📦 24 releases</span>
                 <span>💰 $0.00</span>
-                <span>🌍 1 origins</span>
+                <span>🌍 8 origins</span>
             </div>
         </div>
         
         <div class="competitor-card">
             <div class="name">La Cabra</div>
             <div class="stats">
-                <span>📦 13 releases</span>
+                <span>📦 23 releases</span>
                 <span>💰 $0.00</span>
-                <span>🌍 1 origins</span>
+                <span>🌍 6 origins</span>
             </div>
         </div>
         
         <div class="competitor-card">
-            <div class="name">DAK</div>
+            <div class="name">Intelligentsia</div>
             <div class="stats">
-                <span>📦 12 releases</span>
+                <span>📦 20 releases</span>
                 <span>💰 $0.00</span>
-                <span>🌍 1 origins</span>
+                <span>🌍 9 origins</span>
             </div>
         </div>
         
         <div class="competitor-card">
             <div class="name">Hydrangea</div>
             <div class="stats">
-                <span>📦 11 releases</span>
+                <span>📦 20 releases</span>
                 <span>💰 $0.00</span>
-                <span>🌍 1 origins</span>
+                <span>🌍 7 origins</span>
             </div>
         </div>
         
@@ -737,7 +358,7 @@
                 <div class="dot yellow"></div>
                 <span>Peak: Nov-Feb</span>
             </div>
-            <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">SL28, SL34</div>
+            <div style="color: #888; font-size: 0.85rem; margin-top: 8px;">SL28, SL34, Ruiru 11</div>
         </div>
         
         <div class="harvest-card">

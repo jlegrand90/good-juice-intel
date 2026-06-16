@@ -51,6 +51,15 @@
         .trend-category { margin-bottom: 20px; }
         .trend-category h4 { margin-bottom: 10px; }
         .trend-item { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .margin-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .margin-origin { font-weight: 600; }
+        .margin-details { display: flex; gap: 16px; align-items: center; }
+        .margin-badge { padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .margin-badge.high { background: rgba(0,255,136,0.2); color: #00ff88; }
+        .margin-badge.medium { background: rgba(255,217,61,0.2); color: #ffd93d; }
+        .margin-badge.low { background: rgba(255,107,107,0.2); color: #ff6b6b; }
+        .scarcity-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .scarcity-signal { font-weight: 600; }
         .tier-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
         .tier-bar .label { width: 80px; font-weight: 600; }
         .tier-bar .bar { flex: 1; height: 24px; background: rgba(0,0,0,0.3); border-radius: 4px; overflow: hidden; }
@@ -89,12 +98,12 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 16, 2026 at 11:40 AM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 16, 2026 at 11:47 AM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
         <div class="section action-queue">
-            <div class="section-title">THIS WEEK'S ACTIONS</div>
+            <div class="section-title">⚡ THIS WEEK'S ACTIONS</div>
             
         <div class="action-item priority-2">
             <div class="title">⚡ Limited Availability Alerts</div>
@@ -108,6 +117,86 @@
             <div class="action">→ Monitor: Terres de Café, Hydrangea Coffee Roasters, Offshoot Coffee</div>
         </div>
         
+        </div>
+        
+        <div class="section" style="background: linear-gradient(135deg, rgba(0,217,255,0.1), rgba(0,255,136,0.1)); border: 2px solid rgba(0,217,255,0.3);">
+            <div class="section-title">📈 SOURCING INTELLIGENCE</div>
+            <div class="stats-grid" style="margin-bottom: 20px;">
+                <div class="stat-card">
+                    <div class="value">$3.42</div>
+                    <div class="label">ICE Coffee C</div>
+                    <div class="label" style="color: #00ff88;">+0.0%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" style="font-size: 1.8rem;">🟡 HOLD</div>
+                    <div class="label">Fair market price - source as needed</div>
+                </div>
+            </div>
+            <div class="grid-2">
+                <div>
+                    <h4 style="margin-bottom: 12px; color: #00d9ff;">💰 TOP MARGINS BY ORIGIN</h4>
+                    
+        <div class="margin-item">
+            <div class="margin-origin">Brazil</div>
+            <div class="margin-details">
+                <span>$4.02/lb green</span>
+                <span class="margin-badge high">83.8% margin</span>
+            </div>
+        </div>
+        
+        <div class="margin-item">
+            <div class="margin-origin">Honduras</div>
+            <div class="margin-details">
+                <span>$4.32/lb green</span>
+                <span class="margin-badge high">83.0% margin</span>
+            </div>
+        </div>
+        
+        <div class="margin-item">
+            <div class="margin-origin">Ethiopia</div>
+            <div class="margin-details">
+                <span>$4.92/lb green</span>
+                <span class="margin-badge high">81.2% margin</span>
+            </div>
+        </div>
+        
+        <div class="margin-item">
+            <div class="margin-origin">Guatemala</div>
+            <div class="margin-details">
+                <span>$5.42/lb green</span>
+                <span class="margin-badge high">79.8% margin</span>
+            </div>
+        </div>
+        
+        <div class="margin-item">
+            <div class="margin-origin">Costa Rica</div>
+            <div class="margin-details">
+                <span>$5.72/lb green</span>
+                <span class="margin-badge high">79.0% margin</span>
+            </div>
+        </div>
+        
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 12px; color: #ff6b6b;">⚠️ SCARCITY INDEX</h4>
+                    
+        <div class="scarcity-item">
+            <span class="scarcity-origin">Yemen</span>
+            <span class="scarcity-signal">⚠️ CRITICAL</span>
+        </div>
+        
+        <div class="scarcity-item">
+            <span class="scarcity-origin">Ethiopia</span>
+            <span class="scarcity-signal">⚠️ LOW</span>
+        </div>
+        
+        <div class="scarcity-item">
+            <span class="scarcity-origin">Colombia</span>
+            <span class="scarcity-signal">✓ STABLE</span>
+        </div>
+        
+                </div>
+            </div>
         </div>
         
         <div class="section">
@@ -412,4 +501,4 @@
         </div>
     </div>
 </body>
-</html><!-- Tue Jun 16 11:44:54 PDT 2026 -->
+</html>

@@ -69,9 +69,9 @@
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; width: 100%; }
         @media (max-width: 600px) { .picks-grid { grid-template-columns: 1fr; width: 100%; } }
         .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px; width: 100%; max-width: 100%; box-sizing: border-box; }
-        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; word-wrap: break-word; }
         .pick-card .pick-roaster, .leader-card .leader-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
-        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; word-wrap: break-word; }
         .pick-card .pick-price, .leader-card .leader-price { font-size: 1.2rem; font-weight: 700; color: #00ff88; margin-bottom: 12px; }
         .leader-card .leader-stats { color: #888; font-size: 0.85rem; margin-bottom: 12px; }
         .buy-btn { display: inline-block; padding: 8px 16px; background: linear-gradient(90deg, #00d9ff, #00ff88); color: #1a1a2e; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
@@ -99,7 +99,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 17, 2026 at 06:32 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 17, 2026 at 06:33 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">

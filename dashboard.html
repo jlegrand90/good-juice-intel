@@ -69,9 +69,9 @@
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
         @media (max-width: 600px) { .picks-grid { grid-template-columns: 1fr; } }
         .pick-card, .leader-card { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px; }
-        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
+        .pick-card .pick-name, .leader-card .leader-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .pick-card .pick-roaster, .leader-card .leader-roaster { color: #00d9ff; font-size: 0.9rem; margin-bottom: 8px; }
-        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
+        .pick-card .pick-details, .leader-card .leader-details { color: #888; font-size: 0.85rem; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .pick-card .pick-price, .leader-card .leader-price { font-size: 1.2rem; font-weight: 700; color: #00ff88; margin-bottom: 12px; }
         .leader-card .leader-stats { color: #888; font-size: 0.85rem; margin-bottom: 12px; }
         .buy-btn { display: inline-block; padding: 8px 16px; background: linear-gradient(90deg, #00d9ff, #00ff88); color: #1a1a2e; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
@@ -99,7 +99,7 @@
 <body>
     <div class="header">
         <h1>Good Juice Intelligence Dashboard</h1>
-        <div class="meta">Generated: June 17, 2026 at 06:12 PM | Next Refresh: Tomorrow 9am</div>
+        <div class="meta">Generated: June 17, 2026 at 06:22 PM | Next Refresh: Tomorrow 9am</div>
     </div>
     
     <div class="dashboard">
@@ -257,68 +257,48 @@
             <div class="picks-grid">
                 <div class="category-title">🍓 FRUITY & FLORAL</div>
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">AC</div>
-                <div class="placeholder-roaster">April Coffee Roasters</div>
-            </div>
-            
-            <div class="pick-name">Tadesse - Ethiopia - Natural Krume 74158</div>
-            <div class="pick-roaster">April Coffee Roasters</div>
-            <div class="pick-details">Ethiopia | Unknown | Natural</div>
-            <div class="pick-price">$26.47</div>
-            
+            <img src="https://jlegrand90.github.io/good-juice-intel/bag-images/32139.jpg" alt="Coffee Volcan Azul Caturra" class="bag-image">
+            <div class="pick-name">Coffee Volcan Azul Caturra</div>
+            <div class="pick-roaster">Terres de Café</div>
+            <div class="pick-details">Costa Rica | Caturra | Natural</div>
+            <div class="pick-price">$83.30</div>
+            <a href="https://www.terresdecafe.com/en/beans-coffee/1824-27829-coffee-volcan-azul-caturra-kg.html#/35-coffee_packaging-1kg/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
         </div>
         
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">SA</div>
-                <div class="placeholder-roaster">St. Ali</div>
-            </div>
-            
-            <div class="pick-name">COLOMBIA CHOCOLOCO NATURAL</div>
-            <div class="pick-roaster">St. Ali</div>
-            <div class="pick-details">Colombia | Blend | Natural</div>
-            <div class="pick-price">$18.38</div>
-            
+            <img src="https://jlegrand90.github.io/good-juice-intel/bag-images/32137.jpg" alt="Coffee Yeti Organic" class="bag-image">
+            <div class="pick-name">Coffee Yeti Organic</div>
+            <div class="pick-roaster">Terres de Café</div>
+            <div class="pick-details">Ethiopia | Unknown | Washed</div>
+            <div class="pick-price">$69.40</div>
+            <a href="https://www.terresdecafe.com/en/beans-coffee/1134-20348-coffee-yeti-organic-3700926140114.html#/35-coffee_packaging-1kg/79-grinding-beans/35-coffee_packaging-1kg/79-grinding-beans" target="_blank" class="buy-btn">View →</a>
         </div>
         
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">PX</div>
-                <div class="placeholder-roaster">Push x Pull</div>
-            </div>
-            
-            <div class="pick-name">COSTA RICA AQUIARES ESTATE ESPERANZA NATURAL</div>
-            <div class="pick-roaster">Push x Pull</div>
-            <div class="pick-details">Costa Rica | Esperanza Hybrid | Natural</div>
-            <div class="pick-price">$25.00</div>
-            
+            <img src="https://jlegrand90.github.io/good-juice-intel/bag-images/32136.jpg" alt="Coffee Classic Espresso Blend" class="bag-image">
+            <div class="pick-name">Coffee Classic Espresso Blend</div>
+            <div class="pick-roaster">Terres de Café</div>
+            <div class="pick-details">Brazil, Nicaragua, El Salvador | Blend | Natural, Washed</div>
+            <div class="pick-price">$13.79</div>
+            <a href="https://www.terresdecafe.com/en/beans-coffee/1126-18577-coffee-classic-espresso-3700926146840.html#/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso/33-coffee_packaging-250gr/79-grinding-beans/92-roasting-espresso" target="_blank" class="buy-btn">View →</a>
         </div>
         <div class="category-title">🧪 WILD PROCESSES</div>
         <div class="pick-card">
-            
-            <div class="bag-placeholder">
-                <div class="placeholder-initials">SC</div>
-                <div class="placeholder-roaster">SK Coffee</div>
-            </div>
-            
-            <div class="pick-name">Ecuador - Finca La Noria</div>
-            <div class="pick-roaster">SK Coffee</div>
-            <div class="pick-details">Ecuador | Mejorado | Washed, Anaerobic</div>
-            <div class="pick-price">$36.00</div>
-            
+            <img src="https://jlegrand90.github.io/good-juice-intel/bag-images/32140.jpg" alt="Kindergarten Candy" class="bag-image">
+            <div class="pick-name">Kindergarten Candy</div>
+            <div class="pick-roaster">Promethium Coffee</div>
+            <div class="pick-details">Colombia | Caturra | Washed, Extended Fermentation, Anaerobic</div>
+            <div class="pick-price">$31.00</div>
+            <a href="https://promethiumcoffee.com/products/kindergarden-candy-200g" target="_blank" class="buy-btn">View →</a>
         </div>
         
         <div class="pick-card">
-            <img src="bag-images/32199.jpg" alt="Colombie - Aroma Nativo PB 641 EFM" class="bag-image">
-            <div class="pick-name">Colombie - Aroma Nativo PB 641 EFM</div>
-            <div class="pick-roaster">KB Coffee Roasters</div>
-            <div class="pick-details">Colombia | Pink Bourbon | Temperature Controlled, Sun-dried, Honey, Yeast Inoculated, Dried on Raised Beds, Controlled Fermentation, Anaerobic, Bacteria Inoculated, Double Fermentation</div>
-            <div class="pick-price">$32.47</div>
-            
+            <img src="https://jlegrand90.github.io/good-juice-intel/bag-images/32135.jpg" alt="Hunter Tedman - Hacienda Barbara, Las Brujas - Geisha Anaerobic Natural - Légendes" class="bag-image">
+            <div class="pick-name">Hunter Tedman - Hacienda Barbara, Las Brujas - Geisha Anaerobic Natural - Légendes</div>
+            <div class="pick-roaster">Terres de Café</div>
+            <div class="pick-details">Panama | Geisha | Natural, Anaerobic</div>
+            <div class="pick-price">$46.23</div>
+            <a href="https://www.terresdecafe.com/en/beans-coffee/2001-29336-hunter-tedman-hacienda-barbara-las-brujas-geisha-anaerobic-natural-legendes-3700926147236.html#/79-grinding-beans/184-roasting-uniroast/433-coffee_packaging-100g" target="_blank" class="buy-btn">View →</a>
         </div>
         
             </div>
